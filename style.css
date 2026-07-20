@@ -14,6 +14,9 @@
  --fontarchivo:"Archivo", sans-serif;
  --eclipsecolor:#CEE5E326;
  --problemcolor:#DFA83ACC;
+ --interfonts:"Inter", sans-serif;
+ --statpcolor:#828789;
+
 
 }
 
@@ -325,4 +328,109 @@ width: 100%;
   font-size: 24px;
   color: var(--headercolor);
   padding-top: 15px;
+}
+
+.stats{
+  width: 100%;
+  height: 291px;
+  background-color: var(--buttoncolor );
+  font-family: var(--interfonts);
+  display: flex;
+  gap: 133px;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-div{
+  display: flex;
+}
+
+.stats-cont{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 133px;
+}
+
+.stat-h{
+  font-weight: 500;
+  font-size: 50px;
+  color: var(--downloadcolor);
+}
+
+.stat-p{
+  font-weight:500;
+  font-size: 15px;
+  color: var(--statpcolor);
+}
+
+.cta{
+  width: 100%;
+  height: 380px;
+  background: #0b8057;
+  border-radius: 22px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+.cta h1{
+  font-weight: 600;
+  text-align: center;
+  font-size: 50px;
+  color: var(--buttoncolor);
+  font-family: var(--fontgeist);
+  margin-bottom: 19px;
+}
+
+.cta p{
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  color: var(--buttoncolor);
+  font-family: var(--fontarchivo);
+  margin-bottom: 80px;
+  line-height: 1.5;
+}
+
+.cta-ancho{
+  text-align: center;
+  font-weight: 500;
+  font-family: var(--fontgeist);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.cta-ancho a{
+  text-decoration: none;
+}
+
+.cta-ancho1{
+  width: 200px;
+  height: 52px;
+  font-family: var(--fontgeist);
+  background-color: var(--buttoncolor);
+  color: var(--downloadcolor);
+  padding: 16px 36px;
+  border-radius: 6px;
+  font-size: 18px;
+  box-shadow: 0px 3.43px 3.43px 0px #00000040;
+}
+
+.cta-ancho2{
+  width: 242px;
+  height: 52px;
+  font-family: var(--fontgeist);
+  font-size: 18px;
+  padding: 16px 36px;
+  color: var(--buttoncolor);
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+}
+
+.footer{
+  width: 100%;
+  height: 363px;
+  background-color: var(--buttoncolor);
 }
