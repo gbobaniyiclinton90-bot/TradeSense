@@ -13,21 +13,29 @@
 </head>
 <body>
   <header>
-    <img src="./img/Frame 2147224573.png" alt="">
-    <nav>
+    <div class="header-img">
+      <img src="./img/Frame 2147224573.png" alt="">
+    </div>
+
+    <link rel="stylesheet" href=""><button class="hamburger-button" id="mobile-menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-x"></i>
+    </button>
+    
+    <nav id="mobile-menu">
       <ul>Features</ul>
       <ul>Why Tradersense</ul>
       <ul>Trust</ul>
-    </nav>
 
-    <div>
-      <button>Download App
-       <span class="button-icon">
-        <i class="fa-brands fa-apple"></i>
-       <span class="play-store"><i class="fa-brands fa-google-play"></i></span> 
-       </span>
-      </button>
-    </div>
+      <div class="header-button-wrapper">
+        <button>Download App
+         <span class="button-icon">
+          <i class="fa-brands fa-apple"></i>
+         <span class="play-store"><i class="fa-brands fa-google-play"></i></span> 
+         </span>
+        </button>
+      </div>
+    </nav>
   </header>
   <main>
     <section class="hero">
@@ -67,12 +75,12 @@
             <div class="icon-box">
             <img src="./img/streamline-sharp_notebook-solid (1).png" alt="">  
            </div>
-           </div>
-            <h3>Staff theft & Fraud</h3>
-            <p>You don't know what your staff sold and what  they did not touch.</p>
           </div>
+           <h3>Staff theft & Fraud</h3>
+           <p>You don't know what your staff sold and what they did not touch.</p>
+        </div>
 
-      <div class="card">
+       <div class="card">
        <div class="icon-wrapper">
          <div class="grid"></div>
          <div class="icon-box">
@@ -127,7 +135,7 @@
             
           </div>
 
-          <div class="record-sale" >
+          <div class="record-sale">
 
             <div class="record-img">
              <img src="./img/Rectangle 702.png" alt="">
@@ -249,5 +257,40 @@
       
     </section>
   </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const headerButtonWrapper = document.querySelector('.header-button-wrapper');
+    const navLinks = mobileMenu.querySelectorAll('ul');
+    const barsIcon = menuToggle.querySelector('.fa-bars');
+    const xIcon = menuToggle.querySelector('.fa-x');
+
+    // Toggle menu on hamburger click
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+      headerButtonWrapper.classList.toggle('mobile-visible');
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        headerButtonWrapper.classList.remove('mobile-visible');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('header')) {
+        mobileMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        headerButtonWrapper.classList.remove('mobile-visible');
+      }
+    });
+  </script>
 </body>
 </html>
